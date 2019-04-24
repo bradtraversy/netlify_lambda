@@ -30,7 +30,7 @@ exports.handler = function (event, context, callback) {
                         "Authorization": "Basic ${TOKEN}",
                     }
                 }).then(res =>
-                send(xmlToJson(res)))
+                send(res))
             .catch(err => send(err));
 
     }
