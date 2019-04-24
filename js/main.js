@@ -2,9 +2,10 @@ const fetchUsers = async () =>
   await (await fetch('/.netlify/functions/getusers')).json();
 
 const fetchSN = async () =>
-  await (await fetch('/.netlify/functions/getSN')).json();
+  await (await fetch('/.netlify/functions/getSN'));
 
-/*
+  //await (await fetch('/.netlify/functions/getSN')).json();
+
 fetchUsers().then(data => {
   userList = document.querySelector('#users');
 
@@ -19,7 +20,6 @@ fetchUsers().then(data => {
     userList.appendChild(li);
   });
 });
-*/
 
 fetchSN().then(data => {
   console.log("data")
