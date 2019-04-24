@@ -21,5 +21,8 @@ fetchUsers().then(data => {
 
 fetchSN().then(data => {
   console.log("fetchSN")
+  console.log(fetchSN)
+  
+  console.log("data")
   console.log(data)
 });
