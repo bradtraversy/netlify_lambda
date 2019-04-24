@@ -20,7 +20,7 @@ exports.handler = function(event, context, callback){
   const getInc = () => {
     $.ajax({
       url: "https://aigm3.service-now.com/IncidentAPI.do?SOAP=",
-      async: true,
+      async: false,
       type: "POST",
       data: "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:inc=\"http://www.service-now.com/IncidentServiceAPI\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <inc:IncidentAPIRequest>\r\n         <snTicketNumber>${SN_TICKET}</snTicketNumber>\r\n         <sourceSystem>Test</sourceSystem>\r\n         <operation>GetRecord</operation>\r\n      </inc:IncidentAPIRequest>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
       headers: {
