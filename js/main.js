@@ -4,6 +4,7 @@ const fetchUsers = async () =>
 const fetchSN = async () =>
   await (await fetch('/.netlify/functions/getSN')).json();
 
+/*
 fetchUsers().then(data => {
   userList = document.querySelector('#users');
 
@@ -18,11 +19,12 @@ fetchUsers().then(data => {
     userList.appendChild(li);
   });
 });
+*/
 
-  console.log("fetchSN")
-  console.log( fetchSN() );
-
-fetchSN().then(data => {
+await result = await fetchSN().then(data => {
   console.log("data")
   console.log(data)
 });
+
+  console.log("result")
+  console.log(result)
