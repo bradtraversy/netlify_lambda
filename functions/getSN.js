@@ -1,5 +1,5 @@
 
-const axios = require('axios');
+//const axios = require('axios');
 
 exports.handler = function(event, context, callback){
   const { SN_TICKET, TOKEN } = process.env;
