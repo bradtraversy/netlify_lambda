@@ -21,10 +21,7 @@ fetchUsers().then(data => {
 });
 */
 
-result = async () => await fetchSN().then(data => {
+fetchSN().then(data => {
   console.log("data")
   console.log(data)
 });
-
-  console.log("result")
-  console.log(result)
