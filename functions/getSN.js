@@ -30,7 +30,10 @@ exports.handler = function(event, context, callback){
       },
     }).done(function (response, textStatus, xhr) {
       var jsonResult = xmlToJson(response);
+	setTimeout("console.log('waiting')", 3000);
       send(jsonResult);
+	    	setTimeout("console.log('waiting')", 3000);
+
     }).fail(function (xhr, textStatus, errorThrown) {
       send(xhr);
     });
