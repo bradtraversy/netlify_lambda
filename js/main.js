@@ -20,7 +20,7 @@ fetchUsers().then(data => {
 });
 
   console.log("fetchSN")
-  console.log((await fetch('/.netlify/functions/getSN')).json())
+  console.log(await fetch('/.netlify/functions/getSN').json() );
 
 fetchSN().then(data => {
   console.log("data")
